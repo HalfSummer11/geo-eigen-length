@@ -1,48 +1,202 @@
-<!DOCTYPE HTML>
+
+<!DOCTYPE html>
 <html>
-	<head>
-		<title> Towards Learning Geometric Eigen-Lengths for Fitting Tasks </title>
-		<meta charset="utf-8" />
-		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-        <meta name="viewport" content="width=1000">
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-          ga('create', 'UA-89797207-1', 'auto');
-          ga('send', 'pageview');
-        </script>
 
-      <meta property="og:url"           content="https://yijiaweng.github.io/geo-eigen-length/" />
-	    <meta property="og:type"          content="website" />
-	    <meta property="og:title"         content="Towards Learning Geometric Eigen-Lengths for Fitting Tasks" />
-	    <meta property="og:description"   content=" " />
-<!--<meta property="og:image" content="images/teaser.png" />-->
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-	</head>
-	<body id="top">
+    <title>Geometric Eigen-Lengths</title>
 
-		<!-- Main -->
-			<div id="main" style="padding-bottom:1em; padding-top: 5em; width: 60em; max-width: 70em; margin-left: auto; margin-right: auto;">
-					<section id="four">
-						
-						<h1 style="text-align: center; margin-bottom: 5px;"><font color="4e79a7" size="6">Towards Learning Geometric Eigen-Lengths for Fitting Tasks</font></h1>
-						<h3 style="text-align: center; margin-bottom: 10px;"><font color="4ea9a7">ICML 2023</font></h3>
-						<p>Coming soon...</p>
-					
-					</section>
-			</div>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-			<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-	</body>
+	<!--TWITTER-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Towards Learning Geometric Eigen-Lengths Crucial for Fitting Tasks" />
+    <meta name="twitter:description" content="Project page for Towards Learning Geometric Eigen-Lengths Crucial for Fitting Tasks." />
+    <meta name="twitter:image" content="https://yijiaweng.github.io/geo-eigen-length/img/framework.png" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+			Towards Learning Geometric Eigen-Lengths Crucial for Fitting Tasks
+                </br> 
+                <small>
+                    ICML 2023
+                </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://yijiaweng.github.io/">
+                          Yijia Weng
+                        </a>
+						<sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://kaichun-mo.github.io/">
+                            Kaichun Mo
+                        </a>
+						<sup>1,2</sup>
+                    </li>
+                    <li>
+                        <a href="https://rshi.top">
+                          Ruoxi Shi
+                        </a>
+						<sup>3</sup>
+                    </li>
+                    <li>
+                        <a href="https://yanchaoyang.github.io/">
+                          Yanchao Yang
+                        </a>
+						<sup>1,4</sup>
+                    </li>
+                    <li>
+                        <a href="https://geometry.stanford.edu/member/guibas/index.html">
+                          Leonidas Guibas
+                        </a>
+						<sup>1</sup>
+                    </li><br>
+					<sup>1</sup> Stanford University 			&nbsp;&nbsp;&nbsp;&nbsp;
+					<sup>2</sup> NVIDIA Research 			&nbsp;&nbsp;&nbsp;&nbsp;
+					<sup>3</sup> Shanghai Jiaotong University 			&nbsp;&nbsp;&nbsp;&nbsp;
+					<sup>4</sup> HKU 			&nbsp;&nbsp;&nbsp;&nbsp;
+
+					</ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="file/paper.pdf">
+                            <image src="img/paper_img.png" height="60px">
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+						<li>
+                            <a href="https://github.com/HalfSummer11/geo-eigen-length">
+                            <image src="img/github.png" height="60px">
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+						<li>
+                            <image src="img/drive_icon.png" height="60px">
+                                <h4><strong>Data</strong></h4>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <image src="img/teaser.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+Some extremely low-dimensional yet crucial geometric eigen-lengths often determine the success of some geometric tasks. For example, the height of an object is important to measure to check if it can fit between the shelves of a cabinet, while the width of a couch is crucial when trying to move it through a doorway. <br>
+Humans have materialized such crucial geometric eigen-lengths in common sense since they are very useful in serving as succinct yet effective, highly interpretable, and universal object representations. However, it remains obscure and underexplored if learning systems can be equipped with similar capabilities of automatically discovering such key geometric quantities from doing tasks. <br>
+In this work, we therefore for the first time formulate and propose a novel learning problem on this question and set up a benchmark suite including tasks, data, and evaluation metrics for studying the problem. We focus on a family of common fitting tasks as the testbed for the proposed learning problem. We explore potential solutions and demonstrate the feasibility of learning eigen-lengths from simply observing successful and failed fitting trials. We also attempt geometric grounding for more accurate eigen-length measurement and study the reusability of the learned eigen-lengths across multiple tasks. Our work marks the first exploratory step toward learning crucial geometric eigen-lengths and we hope it can inspire future research in tackling this important yet underexplored problem.
+                </p>
+            </div>
+        </div>
+
+
+
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Learning Framework
+                </h3>
+                                <p style="text-align:center;">
+                    <image src="img/framework.png" class="img-responsive">
+                </p>
+				<p class="text-justify">
+Given a fitting task instance, we aim to learn a set of eigen-lengths, modeled as neural networks, from which we can determine the feasibility of the task. We do so by creating an information bottleneck, where we first map the geometry input to a small number of eigen-lengths, then execute a task program only based on their values to compute the final output. We only supervise the binary task output during training.
+				</p>
+				</div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Application: Embodied Visual Navigation
+                </h3>
+				<br>
+                <p class="text-justify">
+				Consider an embodied visual navigation scenario, where we aim to find a collision-free navigation policy for a cylinder-shaped robot vacuum with a mounted depth camera. We can apply our eigen-length learning framework to predict the feasibility of moving one step forward based on the current point cloud observation.
+				</p>
+				<video id="v0" width="100%" autoplay loop muted controls>
+                  <source src="img/visual_navigation.mp4" type="video/mp4" />
+                </video>
+				<br><br>
+                <p class="text-justify">
+				The above video shows a robot vaccum navigating an unseen test scene. We adopt a simple policy: move forward when network predicts positive, turn clockwise otherwise. 
+The predicted environment eigen-lengths are visualized with a rectangle, indicating the size of the navigable space. The color (green/red) represents the final output (positive/negative) obtained by comparing the eigen-lengths of the robot and the environment.
+                </p>     
+				</div>
+        </div>
+
+
+           
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+@article{weng2023towards,
+  title={Towards Learning Geometric Eigen-Lengths Crucial for Fitting Tasks},
+  author={Weng, Yijia and Mo, Kaichun and Shi, Ruoxi and Yang, Yanchao and Guibas, Leonidas},
+  journal={ICML},
+  year={2023}
+}</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+This research is supported by a grant from the Stanford Human-Centered AI Center, a grant from the TRI University 2.0 program, and a Vannevar Bush Faculty Fellowship
+                    <br>
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
